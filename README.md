@@ -1,7 +1,7 @@
 # LEAGUE CLICKER
 
 > [!WARNING]
-> This is a BETA version and can have bugs, please use [GitHub Issues](https://github.com/YuriXbr/LeagueClicker/issues to report a bug)
+> This is a BETA version and can have bugs, please use [GitHub Issues](https://github.com/YuriXbr/LeagueClicker/issues) to report a bug
 
 ## Setup:
 1. Go to [GitHub release page](https://github.com/YuriXbr/LeagueClicker/releases) and download the latest version.
