@@ -1,5 +1,5 @@
 # LEAGUE CLICKER
-[portuguese version]()
+[portuguese version](https://github.com/YuriXbr/LeagueClicker/tree/main#portuguese-version)
 
 > [!WARNING]
 > This is a **BETA** version and can have bugs, please use [GitHub Issues](https://github.com/YuriXbr/LeagueClicker/issues) to report a bug
