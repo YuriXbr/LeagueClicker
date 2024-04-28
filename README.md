@@ -13,13 +13,13 @@
 > Open it using the executable created on your desktop, or find it on `%appdata%/local/LeagueClicker/LeagueClicker.exe`
 
 > [!TIP]
-> This is the default keybinds:
-> Record the position of your mouse: Control+R
-> Show the cords. of your mouse: Control+F11
-> Pause/Resume macro: F5.
-> Pause/Resume mouse position reading: Control+F12
-> Exit: Control+F10
-> You can exit right clicking on the icon in  your system tray, and go to `exit`
+> This is the default keybinds:\n
+> Record the position of your mouse: Control+R\n
+> Show the cords. of your mouse: Control+F11\n
+> Pause/Resume macro: F5.\n
+> Pause/Resume mouse position reading: Control+F12\n
+> Exit: Control+F10\n
+> You can exit right clicking on the icon in  your system tray, and go to `exit`\n
 
 > [!WARNING]
 > If other app already registered the shortcut in the same keys, LeagueClicker wont be able to do this.
