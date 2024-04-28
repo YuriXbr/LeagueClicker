@@ -1,0 +1,60 @@
+{
+    "keybinds": {
+        "RecordMousePosition": "CommandOrControl+R",
+        "ShowPositions": "CommandOrControl+F11",
+        "PauseResumeMacro": "F5",
+        "PauseResumeMouseReading": "CommandOrControl+F12",
+        "Exit": "CommandOrControl+F10"
+    },
+    "config": {
+        "MacroSleepTime": 1000,
+        "loopdelay": 100
+    },
+    "clickPositions": {
+        "IniciarFila": {
+            "x": 589,
+            "y": 689,
+            "button": 0
+        },
+        "AceitarPartida": {
+            "x": 657,
+            "y": 588,
+            "button": 0
+        },
+        "FecharErro1": {
+            "x": 765,
+            "y": 550,
+            "button": 0
+        },
+        "FecharErro2": {
+            "x": 790,
+            "y": 436,
+            "button": 0
+        },
+        "ComprarLoja1": {
+            "x": 755,
+            "y": 420,
+            "button": 0
+        },
+        "ComprarLoja2": {
+            "x": 565,
+            "y": 356,
+            "button": 0
+        },
+        "AndarParaCentro": {
+            "x": null,
+            "y": null,
+            "button": 2
+        },
+        "SairDaPartida": {
+            "x": 412,
+            "y": 669,
+            "button": 0
+        },
+        "JogarNovamente": {
+            "x": 590,
+            "y": 689,
+            "button": 0
+        }
+    }
+}
