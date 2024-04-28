@@ -21,7 +21,7 @@ Read this sections to find how to use App.<br />
 > [!TIP]
 > * **Record the position of your mouse:** `Control+R` | When pressed, show a dialog box with the X and Y coordinates of your mouse in the moment you pressed the keybind.<br />
 > * **Show the cords. of your mouse:** `Control+F11` | (🚧 Under development)<br />
-> * **Pause/Resume macro:** `F5` | Pause or resume the macro. Please read [this section](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#keybinds-issues) if a keybind dont work.<br />
+> * **Pause/Resume macro:** `F5` | Pause or resume the macro. Please read [this section](https://github.com/YuriXbr/LeagueClicker/main/README.md#keybinds-issues) if a keybind dont work.<br />
 > * **Pause/Resume mouse position reading:** `Control+F12` | Pause or resume the console output coordinates of the mouse (DevOnly)<br />
 > * **Exit:** `Control+F10` | Fully Closes the APP<br />
 >
@@ -46,13 +46,13 @@ Read this sections to find how to use App.<br />
 > If you broke your configs settings or want to hard reset it, just delete `configs.json` and restart the app.
 
 ### **Setting up keybinds:**
-* To change a keybind, follow up the [How to modify your configs:](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#how-to-modify-your-configs) section. You can use `ANY key`, or `modifyKey+key` like `Control+Y` or `F6`, `F2` ... But note once LeagueClicker or another app redeems that key combatination, no other app will be able to register a global shortcut with this key combination. That means if League of Legends, Discord, or any app in your PC already taken this key, it wont work. And if LeagueClicker is using, others apps wont be able to use until you close the program. I recomend `control+ F...` keys.
+* To change a keybind, follow up the [How to modify your configs:](https://github.com/YuriXbr/LeagueClicker/main/README.md#how-to-modify-your-configs) section. You can use `ANY key`, or `modifyKey+key` like `Control+Y` or `F6`, `F2` ... But note once LeagueClicker or another app redeems that key combatination, no other app will be able to register a global shortcut with this key combination. That means if League of Legends, Discord, or any app in your PC already taken this key, it wont work. And if LeagueClicker is using, others apps wont be able to use until you close the program. I recomend `control+ F...` keys.
 
 ### **Setting up macro coordinates**
 1. Open the App and put your mouse in the desired position
 2. Press `Control+R` on default keybinds, or your `RecordPosition` keybind to get your mouse coordinates. Do it again in all spots you want macro to click.
-3. Right click on the LeagueClicker in your system tray, then go to `Exit`, it will prompt to you a save location for a .txt file with all your recorded coordinates, save it anywhere you want. Opening this file you will have a copy of all your coordinates, use the X and Y position to [modify your config file](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#how-to-modify-your-configs).
-4. once you finished it, save the `config.json` and open the LeagueClicker again. <br \>
+3. Right click on the LeagueClicker in your system tray, then go to `Exit`, it will prompt to you a save location for a .txt file with all your recorded coordinates, save it anywhere you want. Opening this file you will have a copy of all your coordinates, use the X and Y position to [modify your config file](https://github.com/YuriXbr/LeagueClicker/main/README.md#how-to-modify-your-configs).
+4. once you finished it, save the `config.json` and open the LeagueClicker again. <br />
 Now you will be able to use your `pause/resume` key to start the macro.
 
 ## **Issues:**
@@ -72,7 +72,7 @@ Now you will be able to use your `pause/resume` key to start the macro.
 > [!IMPORTANT]
 > Having other issue? Please create a ticket on [GitHub Issues](https://github.com/YuriXbr/LeagueClicker/issues) or send me a message on discord. `yuri.js`
 
-<br /> <br /> <br />
+<br /> <br /> <br /> <br /> <br />
 
 # PORTUGUESE VERSION:
 
@@ -96,7 +96,7 @@ Leia estas seções para saber como usar o aplicativo.<br />
 > [!TIP]
 > * **Registre a posição do mouse:** `Control+R` | Quando pressionado, mostra uma caixa de diálogo com as coordenadas X e Y do mouse no momento em que você pressionou a tecla.<br />
 > * **Mostre as coordenadas do mouse:** `Control+F11` | (🚧 Em desenvolvimento)<br />
-> * **Pausar/Retomar macro:** `F5` | Pause ou retome a macro. Por favor, leia [esta seção](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es) se um atalho de teclado não funcionar.<br />
+> * **Pausar/Retomar macro:** `F5` | Pause ou retome a macro. Por favor, leia [esta seção](https://github.com/YuriXbr/LeagueClicker/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es) se um atalho de teclado não funcionar.<br />
 > * **Pausar/retomar leitura da posição do mouse:** `Control+F12` | Pausar ou retomar as coordenadas de saída do console do mouse (DevOnly)<br />
 > * **Sair:** `Control+F10` | Fecha totalmente o APP<br />
 >
@@ -121,13 +121,13 @@ Leia estas seções para saber como usar o aplicativo.<br />
 > Se você quebrou suas configurações ou deseja redefini-lo, basta excluir `configs.json` e reiniciar o aplicativo.
 
 ### **Configurando atalhos de teclado:**
-* Para alterar um atalho de teclado, siga a seção [Como modificar suas configurações:](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es). Você pode usar `QUALQUER botão` ou `modifyKey+key` como `Control+Y` ou `F6`, `F2` ... Mas observe que uma vez que LeagueClicker ou outro aplicativo resgata essa chave de combate, nenhum outro aplicativo será capaz de registre um atalho global com esta combinação de teclas. Isso significa que se League of Legends, Discord ou qualquer aplicativo em seu PC já tiver essa chave, ela não funcionará. E se o LeagueClicker estiver sendo usado, outros aplicativos não poderão ser usados até que você feche o programa. Eu recomendo as teclas `control+ F...`.
+* Para alterar um atalho de teclado, siga a seção [Como modificar suas configurações:](https://github.com/YuriXbr/LeagueClicker/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es). Você pode usar `QUALQUER botão` ou `modifyKey+key` como `Control+Y` ou `F6`, `F2` ... Mas observe que uma vez que LeagueClicker ou outro aplicativo resgata essa chave de combate, nenhum outro aplicativo será capaz de registre um atalho global com esta combinação de teclas. Isso significa que se League of Legends, Discord ou qualquer aplicativo em seu PC já tiver essa chave, ela não funcionará. E se o LeagueClicker estiver sendo usado, outros aplicativos não poderão ser usados até que você feche o programa. Eu recomendo as teclas `control+ F...`.
 
 ### **Configurando coordenadas macro**
 1. Abra o App e coloque o mouse na posição desejada
 2. Pressione `Control+R` nas teclas padrão ou a tecla `RecordPosition` para obter as coordenadas do mouse. Faça isso novamente em todos os locais onde deseja que a macro clique.
-3. Clique com o botão direito no LeagueClicker na bandeja do sistema e vá em `Exit`, ele solicitará um local para salvar um arquivo .txt com todas as suas coordenadas gravadas, salve-o onde desejar. Abrindo este arquivo você terá uma cópia de todas as suas coordenadas, use a posição X e Y para [modificar seu arquivo de configuração](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es).
-4. assim que terminar, salve o `config.json` e abra o LeagueClicker novamente. <br\>
+3. Clique com o botão direito no LeagueClicker na bandeja do sistema e vá em `Exit`, ele solicitará um local para salvar um arquivo .txt com todas as suas coordenadas gravadas, salve-o onde desejar. Abrindo este arquivo você terá uma cópia de todas as suas coordenadas, use a posição X e Y para [modificar seu arquivo de configuração](https://github.com/YuriXbr/LeagueClicker/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es).
+4. assim que terminar, salve o `config.json` e abra o LeagueClicker novamente. <br />
 Agora você poderá usar a tecla `pause/resume` para iniciar a macro.
 
 ## **Problemas:**
