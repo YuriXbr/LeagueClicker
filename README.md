@@ -95,7 +95,7 @@ Leia estas seções para saber como usar o aplicativo.<br />
 ### **Atalhos de teclas padrão:**
 > [!TIP]
 > * **Registre a posição do mouse:** `Control+R` | Quando pressionado, mostra uma caixa de diálogo com as coordenadas X e Y do mouse no momento em que você pressionou a tecla.<br />
-> * **Mostre os cabos. do mouse:** `Control+F11` | (🚧 Em desenvolvimento)<br />
+> * **Mostre as coordenadas do mouse:** `Control+F11` | (🚧 Em desenvolvimento)<br />
 > * **Pausar/Retomar macro:** `F5` | Pause ou retome a macro. Por favor, leia [esta seção](https://github.com/YuriXbr/LeagueClicker/edit/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es) se um atalho de teclado não funcionar.<br />
 > * **Pausar/retomar leitura da posição do mouse:** `Control+F12` | Pausar ou retomar as coordenadas de saída do console do mouse (DevOnly)<br />
 > * **Sair:** `Control+F10` | Fecha totalmente o APP<br />
