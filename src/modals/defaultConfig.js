@@ -1,7 +1,7 @@
 defaultconfig = {
     __DevComments: {
-        textEN: "Use this file to change the AutoClicker configurations, tutorial: ",
-        textPTBR: "Utilize esse arquivo para configurar o autoclicker, tutorial: " 
+        textEN: "Use this file to change the AutoClicker configurations, tutorial: https://github.com/YuriXbr/LeagueClicker/blob/BETA-1.0.0/README.md",
+        textPTBR: "Utilize esse arquivo para configurar o autoclicker, tutorial: https://github.com/YuriXbr/LeagueClicker/blob/BETA-1.0.0/README.md" 
     },
     keybinds: {
         RecordMousePosition: 'CommandOrControl+R',

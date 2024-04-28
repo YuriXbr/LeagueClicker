@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: path.join(__dirname, "src", "assets", "app512.ico")
+    icon: path.join(__dirname, "src", "assets", "app.ico")
   },
   rebuildConfig: {},
   makers: [
@@ -15,20 +15,35 @@ module.exports = {
         name: "LeagueClicker",
         iconUrl: 'https://cdn.discordapp.com/attachments/776142549772927048/1233951011349991527/app512.ico?ex=662ef5ee&is=662da46e&hm=e73a87a110c135943d2f9a2e1f0b606901e78f087a7ad83194f4765ad6fa2dff&',
         // The ICO file to use as the icon for the generated Setup.exe
-        setupIcon: path.join(__dirname, "src", "assets", "app512.ico")
+        setupIcon: path.join(__dirname, "src", "assets", "app512.ico"),
+        icon: path.join(__dirname, "src", "assets", "app.ico")
       },
     },
     {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
+      config: {
+        options: {
+          icon: path.join(__dirname, "src", "assets", "app.ico")
+        }
+      },
+      
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        options: {
+          icon: path.join(__dirname, "src", "assets", "app.ico")
+        }
+      },
     },
     {
       name: '@electron-forge/maker-rpm',
-      config: {},
+      config: {
+        options: {
+          icon: path.join(__dirname, "src", "assets", "app.ico")
+        }
+      },
     },
   ],
   plugins: [
