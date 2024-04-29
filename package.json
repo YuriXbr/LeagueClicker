@@ -1,6 +1,6 @@
 {
   "name": "LeagueClicker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "League Auto Clicker",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,18 @@
     "make": "electron-forge make",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuriXbr/LeagueClicker"
+  },
   "keywords": [],
-  "author": "YuriXbr",
-  "license": "ISC",
+  "author": "YuriXbr <yurixbroficial@gmail.com> (https://github.com/YuriXbr)",
+  "homepage": "https://github.com/YuriXbr/LeagueClicker",
+  "bugs": {
+    "url": "https://github.com/YuriXbr/LeagueClicker/issues",
+    "email": "yurixbroficial@gmail.com"
+  },
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@nut-tree/nut-js": "^3.1.2",
     "electron-prompt": "^1.7.0",
