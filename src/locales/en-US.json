@@ -1,0 +1,32 @@
+{
+    "code": "en-US",
+    "tray": {
+        "header": "KEYBINDS:",
+        "recordMousePosition": "Record Mouse Position:",
+        "showPositions": "Show Positions",
+        "pauseResumeMacro": "Pause/Resume Macro:",
+        "pauseResumeMouseReading": "Pause/Resume Mouse Reading:",
+        "exit": "Exit:",
+
+        "previewClicks": "Preview Clicks",
+        "startQueue": "Start Queue:",
+        "acceptMatch": "Accept Match:",
+        "closeError1": "Close Error (1):",
+        "closeError2": "Close Error (2):",
+        "buyChampion1": "Buy Champion (1):",
+        "buyChampion2": "Buy Champion (2):",
+        "buyChampion3": "Buy Champion (3):",
+        "buyChampion4": "Buy Champion (4):",
+        "buyChampion5": "Buy Champion (5):",
+        "walkToCenter": "Walk to Center:",
+        "selectCard": "Select Card:",
+        "quitMatch": "Quit Match:",
+        "playAgain": "Play Again:",
+        "extra1": "Extra Position (1):",
+        "extra2": "Extra Position (2):",
+        "extra3": "Extra Position (3):",
+
+        "updateKeybinds": "Update Keybinds",
+        "quit": "Quit"
+    }
+}

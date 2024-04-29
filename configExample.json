@@ -1,60 +1,156 @@
 {
+    "__DevComments": {
+        "textENUS": "Use this file to change the AutoClicker configurations, tutorial: https://github.com/YuriXbr/LeagueClicker/blob/BETA-1.0.0/README.md",
+        "textPTBR": "Utilize esse arquivo para configurar o autoclicker, tutorial: https://github.com/YuriXbr/LeagueClicker/blob/BETA-1.0.0/README.md"
+    },
     "keybinds": {
-        "RecordMousePosition": "CommandOrControl+R",
-        "ShowPositions": "CommandOrControl+F11",
-        "PauseResumeMacro": "F5",
-        "PauseResumeMouseReading": "CommandOrControl+F12",
-        "Exit": "CommandOrControl+F10"
+        "recordMousePosition": "CommandOrControl+R",
+        "showPositions": "CommandOrControl+F11",
+        "pauseResumeMacro": "F5",
+        "pauseResumeMouseReading": "CommandOrControl+F12",
+        "exit": "CommandOrControl+F10"
     },
     "config": {
-        "MacroSleepTime": 1000,
-        "loopdelay": 100
+        "language": "pt-BR",
+        "macroSleepTime": 5000,
+        "loopdelay": 100,
+        "leagueOnly": null,
+        "autoShutDown": false
     },
     "clickPositions": {
-        "IniciarFila": {
+        "startQueue": {
             "x": 589,
             "y": 689,
             "button": 0
         },
-        "AceitarPartida": {
+        "acceptMatch": {
             "x": 657,
             "y": 588,
             "button": 0
         },
-        "FecharErro1": {
+        "closeError1": {
             "x": 765,
             "y": 550,
             "button": 0
         },
-        "FecharErro2": {
+        "closeError2": {
             "x": 790,
             "y": 436,
             "button": 0
         },
-        "ComprarLoja1": {
+        "buyChampion1": {
             "x": 755,
             "y": 420,
             "button": 0
         },
-        "ComprarLoja2": {
+        "buyChampion2": {
             "x": 565,
             "y": 356,
             "button": 0
         },
-        "AndarParaCentro": {
+        "buyChampion3": {
             "x": null,
             "y": null,
-            "button": 2
+            "button": 0
         },
-        "SairDaPartida": {
+        "buyChampion4": {
+            "x": null,
+            "y": null,
+            "button": 0
+        },
+        "buyChampion5": {
+            "x": null,
+            "y": null,
+            "button": 0
+        },
+        "walkToCenter": {
+            "x": null,
+            "y": null,
+            "button": 0
+        },
+        "selectCard": {
+            "x": null,
+            "y": null,
+            "button": 0
+        },
+        "quitMatch": {
             "x": 412,
             "y": 669,
             "button": 0
         },
-        "JogarNovamente": {
+        "playAgain": {
             "x": 590,
             "y": 689,
             "button": 0
+        },
+        "extra1": {
+            "x": null,
+            "y": null,
+            "button": 0
+        },
+        "extra2": {
+            "x": null,
+            "y": null,
+            "button": 0
+        },
+        "extra3": {
+            "x": null,
+            "y": null,
+            "button": 0
         }
-    }
+    },
+    "shutDown": {
+        "hours": null,
+        "minutes": null,
+        "seconds": null,
+        "duration": null,
+        "checkInMatch": null,
+        "type": null
+    },
+    "dashboard": {
+        "serverIP": null,
+        "serverPort": null,
+        "serverDNS": null,
+        "enableDashboard": false,
+        "dashBoardPassword": null,
+        "requirePassword": true,
+        "allowGlobalConnections": false
+    },
+    "LCU": {
+        "LCUToken": null,
+        "LCUPort": null,
+        "LCUIp": null,
+        "LCUPassword": null
+    },
+    "discordIntegration": {
+        "token": null,
+        "clientId": null,
+        "secret": null,
+        "ownerId": null,
+        "guildId": null
+    },
+    "database": {
+        "db": null,
+        "ip": null,
+        "password": null,
+        "port": null,
+        "type": null
+    },
+    "logs": {
+        "logPath": "c:/LeagueClicker/Logs",
+        "enableLogging": true,
+        "enableLogSave": true,
+        "logErros": true,
+        "logEvents": true,
+        "logWarnings": true,
+        "logDashboard": true,
+        "logOutputs": true
+    },
+    "dev": {
+        "consolePrint": false,
+        "errorPrint": false,
+        "enableEval": false,
+        "forceLang": false
+    },
+    "fileVersion": "2.0.0"
 }
