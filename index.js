@@ -22,23 +22,33 @@ async function setup() {
     await configManager.setupConfig();
     localeManager.setupLocales();
     await keyManager.setupKeybinds();
+}
+
+
+
+function setup() {
+    configManager.setupConfig();
+    localeManager.setupLocales();
+    keyManager.setupKeybinds();
     require('./src/utils/trayManager.js').createTrayIcon();
 }
 
 function loop() {
     setInterval(() => {
-        if (!pauseReading) {
-            getMousePosition(true)
+        if (!cache.pauseReading()) {
+            mouseManager.getMousePosition(true)
         }
-    }, config.config.loopdelay);
 
+
+
+    }, config.config.loopdelay);
 }
 
 
 async function quit() {
-    if(recordedPositions[0][0] == undefined) return app.quit();
-    const positionsText = await recordedPositions.map((pos, index) => {
-        return `index: ${index} ; X: ${pos[0]} Y: ${pos[1]}`;
+    if(cache._recordedPositions[0][0] == undefined) return app.quit();
+    const positionsText = await cache._recordedPositions.map((pos, index) => {
+        return `index: ${index} ; X: ${pos[0]} Y: ${pos[1]}`;   
     }).join('\n');
     await dialog.showSaveDialog({
         title: 'Escolha o diretório para salvar as posições',
@@ -60,7 +70,7 @@ async function quit() {
 app.on('before-quit', (event) => {
     require('./src/utils/trayManager.js').closeTray();
     console.log("\n\n\nRecorded Positions:\n");
-    recordedPositions.forEach((pos, index) => {
+    cache._recordedPositions.forEach((pos, index) => {
         if(pos[0] != undefined) console.log(`index: ${index} ; X: ${pos[0]} Y: ${pos[1]}`);
     });
     windowManager.closeAllWindows();
@@ -79,3 +89,9 @@ ipcMain.on('update-keybinds', (event, newKeybinds) => {
     setup();
 
 })
+
+module.exports = {
+    setup,
+    loop,
+    quit,
+}
