@@ -2,15 +2,12 @@ const { app, dialog } = require('electron');
 if (require('electron-squirrel-startup')) app.quit();
 const fs = require('fs');
 
-
 const localeManager = require('./src/utils/localeManager.js');
 const configManager = require('./src/utils/configManager.js');
 const keyManager = require('./src/utils/keyManager.js');
 const mouseManager = require('./src/utils/mouseManager.js');
 const updater = require('./src/utils/updateManager.js');
 const cache = require('./src/configs/cache.js')
-
-
 
 async function setup() {
     configManager.setupConfig();
