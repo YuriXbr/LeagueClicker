@@ -1,4 +1,5 @@
 const { app, Menu, Tray, globalShortcut, dialog } = require('electron');
+const { ipcMain, ipcRenderer } = require('electron');
 if (require('electron-squirrel-startup')) app.quit();
 
 const { mouse } = require("@nut-tree/nut-js");
@@ -9,7 +10,19 @@ const localeManager = require('./src/utils/localeManager.js');
 const configManager = require('./src/utils/configManager.js');
 const keyManager = require('./src/utils/keyManager.js');
 const mouseManager = require('./src/utils/mouseManager.js');
+const windowManager = require('./src/utils/windowManager.js');
 const cache = require('./src/configs/cache.js')
+
+app.on('ready', () => {
+    setup();
+    loop();
+});
+
+async function setup() {
+    await configManager.setupConfig();
+    localeManager.setupLocales();
+    await keyManager.setupKeybinds();
+}
 
 
 
@@ -54,18 +67,28 @@ async function quit() {
     app.quit();
 }
 
-app.on('ready', () => {
-    setup();
-    loop();
-});
-
 app.on('before-quit', (event) => {
+    require('./src/utils/trayManager.js').closeTray();
     console.log("\n\n\nRecorded Positions:\n");
     cache._recordedPositions.forEach((pos, index) => {
         if(pos[0] != undefined) console.log(`index: ${index} ; X: ${pos[0]} Y: ${pos[1]}`);
     });
+    windowManager.closeAllWindows();
     
 });
+
+ipcMain.on('request-config', (event) => {
+    const keybinds = configManager.getConfig().keybinds;
+    console.log("enviando", {keybinds})
+    event.reply('config-response', {keybinds});
+  });
+
+ipcMain.on('update-keybinds', (event, newKeybinds) => {
+    console.log({newKeybinds});
+    configManager.updateToFile('keybinds', newKeybinds);
+    setup();
+
+})
 
 module.exports = {
     setup,

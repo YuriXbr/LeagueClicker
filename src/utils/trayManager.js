@@ -2,12 +2,14 @@ const {Menu, Tray} = require("electron");
 const fs = require('fs');
 const path = require('path');
 const main = require(path.join(__dirname, "../", "../", "index.js"));
-const click = require('./mouseManager.js');
-const keyManager = require('./keyManager.js');
+const mouseManager = require('./mouseManager.js');
+const windowManager = require('./windowManager.js');
+const configManager = require('./configManager.js');
+
 let tray;
 let contextMenu;
 
-let config = require("c:/LeagueClicker/config.json")
+let config = configManager.getConfig();
 
 const langFolder = path.join(__dirname, "../", "locales");
 let langPath = path.join(langFolder, `${config.config.language}.json`);
@@ -35,7 +37,7 @@ function getClickPositionsMenuItem(){
     const clickPositionsItems = Object.entries(config.clickPositions).map(([position, { x, y, button }]) => ({
         label: `${lang.tray[position]} X ${x} : Y ${y}`,
         type: 'normal',
-        click: () => click.singleClick(x, y, button)
+        click: () => mouseManager.singleClick(x, y, button)
     }));
     return clickPositionsItems;
 }
@@ -56,6 +58,7 @@ function updateContextMenu() {
         { type: 'separator' },
         { label: lang.tray.previewClicks, type: 'submenu', submenu: getClickPositionsMenuItem() },
         { label: "Languages", type: 'submenu', submenu: getLocaleMenuItens() },
+        { label: `Settings`, type: 'normal', click: () => { windowManager.invoke("settings") } },
         { type: 'separator' },
         { label: lang.tray.quit, type: 'normal', click: () => { main.quit(); } }
     ]);
@@ -76,7 +79,13 @@ function createTrayIcon() {
     tray.setContextMenu(updateContextMenu());
 }
 
+function closeTray() {
+    tray.destroy();
+    return;
+}
+
 module.exports = {
     createTrayIcon,
-    updateContextMenu
+    updateContextMenu,
+    closeTray
 }

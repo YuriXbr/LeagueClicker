@@ -2,6 +2,7 @@ const {globalShortcut} = require('electron');
 const cache = require('../configs/cache')
 const click = require('./mouseManager');
 const dialogManager = require('./dialogManager');
+const configManager = require('./configManager');
 
 function removeAllKeybinds() {
     globalShortcut.unregisterAll();
@@ -10,7 +11,8 @@ function removeAllKeybinds() {
 
 function setupKeybinds() {
     removeAllKeybinds();
-    config = require('c:/LeagueClicker/config.json');
+    try{
+    config = configManager.getConfig();
     keybinds = config.keybinds;
 
     globalShortcut.register(keybinds.recordMousePosition, () => {
@@ -48,6 +50,9 @@ function setupKeybinds() {
         console.log("[KeyManager > setupKeybinds]: ", 'Exit shortcut triggered');
     });
     console.log("[KeyManager > setupKeybinds]: ", 'Exit configurado em', keybinds.exit);
+    } catch(err) {
+        console.log(err);
+    }
 }
 
 module.exports = {

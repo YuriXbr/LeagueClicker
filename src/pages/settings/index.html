@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Settings</title>
+</head>
+<body>
+  <h1 class="title">Settings</h1>
+  <div class="inputs">
+    <ul>
+      <li>
+        <label class="keytext">Record Position:</label>
+        <input class="input-section" id="recordMousePosition" placeholder="keybind">
+      </li>
+      <li>
+        <label class="keytext">Show Positions:</label>
+        <input class="input-section" id="showPositions" placeholder="keybind">
+      </li>
+      <li>
+        <label class="keytext">Pause/Resume Macro:</label>
+        <input class="input-section" id="pauseResumeMacro" placeholder="keybind">
+      </li>
+      <li>
+        <label class="keytext">Pause/Resume MouseReading:</label>
+        <input class="input-section" id="pauseResumeMouseReading" placeholder="keybind">
+      </li>
+      <li>
+        <label class="keytext">Exit:</label>
+        <input class="input-section" id="exit" placeholder="keybind">
+      </li>
+    </ul>
+  </div>
+  <div class="buttons">
+    <button class="save-button">SAVE</button>
+  </div>
+</body>
+<script src="./keyRegister.js"></script>
+<script src="./index.js"></script>
+</html>
