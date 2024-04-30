@@ -2,7 +2,7 @@ let _pauseMacro = true;
 let _pauseReading = true;
 let _recordedPositions = new Array(50).fill(null).map(() => new Array(2)); // Inicializa o array bidimensional
 let recordedindex = 0;
-
+let gitRep = 'https://api.github.com/repos/YuriXbr/LeagueClicker/releases/latest'
 
 function pauseMacro(WriteEnable) {
     if(WriteEnable == "toggle") {
@@ -38,5 +38,6 @@ module.exports = {
     pauseMacro,
     pauseReading,
     saveCachePosition,
-    _recordedPositions
+    _recordedPositions,
+    gitRep
 }

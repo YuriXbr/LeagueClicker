@@ -19,7 +19,6 @@ function setupConfig(){
         console.log("[configManager > setupConfig]: Versao do arquivo default:", require(configPath).fileVersion)
         if(config.fileVersion == require(configPath).fileVersion) {
             config = JSON.parse(configFile);
-            console.log({config})
             return console.log("[configManager > setupConfig]: Configuracoes atualizadas.");
         } else {
             fs.writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf-8');
@@ -32,29 +31,9 @@ function setupConfig(){
     }
 }
 
-function getConfig() {
-    config = require('c:/LeagueClicker/config.json');
-    return config;
-}
-
-async function updateToFile(local, parametros, value) {
-    config = getConfig();
-    if (local === 'keybinds') {
-        config[local] = parametros;
-    } else {
-        if(value == null || value == undefined) return console.log("Valor invalido");
-        config[local][parametros] = value;
-    }
-
-    fs.writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf-8');
-}
-
-
 module.exports = {
     setupConfig,
-    updateToFile,
     config,
     configPath,
-    configFolderPath,
-    getConfig
+    configFolderPath
 }
