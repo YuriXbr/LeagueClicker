@@ -1,0 +1,33 @@
+{
+    "code": "pt-BR" ,
+    "tray": {
+        "header": "TECLAS DE ATALHO:",
+        "recordMousePosition": "Gravar posição do mouse",
+        "showPositions": "Mostrar posições",
+        "pauseResumeMacro": "Pausar/Resumir Macro",
+        "pauseResumeMouseReading": "Pausar/Resumir Leitura do mouse",
+        "exit": "Sair",
+
+        "previewClicks": "Testar Cliques",
+        "startQueue": "Iniciar Fila:",
+        "acceptMatch": "Aceitar Partida:",
+        "closeError1": "Fechar Erro (1):",
+        "closeError2": "Fechar Erro (2):",
+        "buyChampion1": "Comprar Campeão (1):",
+        "buyChampion2": "Comprar Campeão (2):",
+        "buyChampion3": "Comprar Campeão (3):",
+        "buyChampion4": "Comprar Campeão (4):",
+        "buyChampion5": "Comprar Campeão (5):",
+        "walkToCenter": "Andar Para o Centro:",
+        "selectCard": "Selecionar Carta:",
+        "quitMatch": "sair da Partida:",
+        "playAgain": "Jogar Novamente:",
+        "extra1": "Posição Extra (1):",
+        "extra2": "Posição Extra (2):",
+        "extra3": "Posição Extra (3):",
+
+        "updateKeybinds": "Atualizar atalhos",
+        "quit": "Sair"
+    }
+
+}

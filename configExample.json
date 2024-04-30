@@ -1,4 +1,8 @@
 {
+    "__DevComments": {
+        "textENUS": "Use this file to change the AutoClicker configurations, tutorial: https://github.com/YuriXbr/LeagueClicker/",
+        "textPTBR": "Utilize esse arquivo para configurar o autoclicker, tutorial: https://github.com/YuriXbr/LeagueClicker/"
+    },
     "keybinds": {
         "RecordMousePosition": "CommandOrControl+R",
         "ShowPositions": "CommandOrControl+F11",

@@ -1,0 +1,89 @@
+* {
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #181818;
+}
+
+li {
+  padding-top: 10px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.inputs {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.keytext {
+  color: white;
+  width: 200px;
+  display: inline-block;
+}
+
+.input-section {
+  color: cyan;
+  width: 200px; /* Aumentar a largura do campo de entrada */
+  min-width: 200px; /* Definir uma largura mínima */
+  height: 30px;
+  border: hidden;
+  border-radius: 5px;
+  background-color: #22303C;
+  white-space: nowrap; /* Evitar quebras de linha */
+  overflow: hidden; /* Ocultar o conteúdo que ultrapassa o limite */
+  text-overflow: ellipsis; /* Exibir reticências (...) para indicar texto truncado */
+}
+
+.input-section::placeholder {
+  padding-left: 5px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.save-button {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.save-button:hover {
+  background-color: #2c974b;
+}
+
+.save-button:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.save-button:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.save-button:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
