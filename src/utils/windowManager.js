@@ -5,6 +5,7 @@ const logger = require('./logManager.js')
 let settingsWindow;
 
 function createSettingsWindow() {
+    logger.write('utils', 'windowManager > createSettingsWindow', 'Criando janela de configuracoes')
     settingsWindow = new BrowserWindow({
         width: 500,
         height: 800,
@@ -29,7 +30,10 @@ function createSettingsWindow() {
     settingsWindow.on('close', (event) => {
         event.preventDefault();
         try{
-        settingsWindow.hide();
+        if(settingsWindow != null || settingsWindow != undefined) {
+            settingsWindow.hide();
+            logger.write('utils', 'windowManager > on.close', 'Fechando janela de configuracoes')
+        } 
         } catch(error) {
             logger.writeError('utils','WindowManager > invoke', 'Erro ao fechar a janela. de configurações.', error)
         }

@@ -1,11 +1,11 @@
 const {Menu, Tray} = require("electron");
 const fs = require('fs');
 const path = require('path');
-const main = require(path.join(__dirname, "../", "../", "index.js"));
 const mouseManager = require('./mouseManager.js');
 const windowManager = require('./windowManager.js');
 const configManager = require('./configManager.js');
 const logger = require('./logManager.js');
+const power = require('./powerManager.js');
 
 let tray;
 let contextMenu;
@@ -64,7 +64,7 @@ function updateContextMenu() {
         { label: "Languages", type: 'submenu', submenu: getLocaleMenuItem() },
         { label: `Settings`, type: 'normal', click: () => { windowManager.invoke("settings") } },
         { type: 'separator' },
-        { label: lang.tray.quit, type: 'normal', click: () => { main.quit(); } }
+        { label: lang.tray.quit, type: 'normal', click: () => { power.quit(); } }
     ]);
     return contextMenu;
 }
