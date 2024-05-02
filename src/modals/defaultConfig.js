@@ -12,7 +12,7 @@ defaultconfig = {
     },
     config: {
         language: null,
-        macroSleepTime: 5000,
+        macroSleepTime: 2500,
         loopdelay: 100,
         leagueOnly: null,
         autoShutDown: false

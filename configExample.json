@@ -11,8 +11,8 @@
         "exit": "CommandOrControl+F10"
     },
     "config": {
-        "language": "pt-BR",
-        "macroSleepTime": 5000,
+        "language": "en-US",
+        "macroSleepTime": 2500,
         "loopdelay": 100,
         "leagueOnly": null,
         "autoShutDown": false
