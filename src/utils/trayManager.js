@@ -63,8 +63,9 @@ function updateContextMenu() {
         { label: lang.tray.previewClicks, type: 'submenu', submenu: getClickPositionsMenuItem() },
         { label: "Languages", type: 'submenu', submenu: getLocaleMenuItem() },
         { label: `Settings`, type: 'normal', click: () => { windowManager.invoke("settings") } },
+        { label: `Reload`, type: 'normal', click: () => { power.restart() } },
         { type: 'separator' },
-        { label: lang.tray.quit, type: 'normal', click: () => { power.quit(); } }
+        { label: lang.tray.quit, type: 'normal', click: () => { power.quit() } }
     ]);
     return contextMenu;
 }

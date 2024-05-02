@@ -9,6 +9,14 @@ function quit() {
     app.quit();
 }
 
+function restart() {
+    logger.write('utils', 'PowerManager > restart', 'Sinal de reinicio recebido');
+    app.relaunch();
+    app.quit();
+}
+
+app.restart
 module.exports = {
     quit,
+    restart
 }
