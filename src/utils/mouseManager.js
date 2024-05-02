@@ -21,23 +21,38 @@ async function getMousePosition(print) {
 
 async function executeMacro() {
     let config = require("c:/LeagueClicker/config.json");
-    
+
     for (const position in config.clickPositions) {
         if (cache.pauseMacro()) return;
 
         if (config.clickPositions.hasOwnProperty(position)) {
-            const { x, y, button } = config.clickPositions[position];
-            if (x !== null && y !== null && (button >= 0 && button <= 2) ) {
-                logger.write('macro', 'MouseManager > executeMacro', `Movendo o mouse para posicao: (${x}, ${y})`)
+            let { x, y, button } = config.clickPositions[position];
+
+            // Verificar se x e y são strings e convertê-los em números inteiros se necessário
+            if (typeof x === "string") {
+                x = parseInt(x, 10);
+            }
+            if (typeof y === "string") {
+                y = parseInt(y, 10);
+            }
+
+            // Verificar se o valor de button é uma string e convertê-lo em número inteiro, se necessário
+            if (typeof button === "string") {
+                button = parseInt(button, 10);
+            }
+
+            // Verificar se os valores são válidos e executar o clique do mouse
+            if (!isNaN(x) && !isNaN(y) && (button >= 0 && button <= 2)) {
+                logger.write('macro', 'MouseManager > executeMacro', `Movendo o mouse para posição: (${x}, ${y})`);
                 await mouse.move({ x, y });
-                logger.write('macro', 'MouseManager > executeMacro', `Executando clique em: (${x}, ${y}) com botao ${button}`)
+                logger.write('macro', 'MouseManager > executeMacro', `Executando clique em: (${x}, ${y}) com botão ${button}`);
                 await mouse.click(button);
-                await delay(config.config.macroSleepTime); // Espera o tempo especificado entre os cliques
+                await delay(config.config.macroSleepTime); // Esperar o tempo especificado entre os cliques
             }
         }
     }
 
-    if(!cache.pauseMacro()) return executeMacro();
+    if (!cache.pauseMacro()) return executeMacro();
 }
 
 function delay(ms) {
