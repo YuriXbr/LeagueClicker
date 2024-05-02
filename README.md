@@ -31,7 +31,8 @@ Read this sections to find how to use App.<br />
 > **You can exit right clicking on the icon in  your system tray, and go to `exit`**
 
 ### **How to modify your configs:**
-1. Go to `C:/LeagueClicker`, then Find config.json.
+1. ~~Go to `C:/LeagueClicker`, then Find config.json.~~
+1. Right-click on the icon on the tray, and go to "settings", there you can modify the coordinates and shortcut keys. At the moment (Beta-1.3.2) It is not yet possible to reduce the delay through the settings page, and you still need to access `config.json` in `c:/LeagueClicker`
 2. Update whatever you want, then save the file and restart the app.
 
 * `__DevComments:` Comments left by the developer for the user.
@@ -55,7 +56,8 @@ Read this sections to find how to use App.<br />
 1. Open the App and put your mouse in the desired position
 2. Press `Control+R` on default keybinds, or your `RecordPosition` keybind to get your mouse coordinates. Do it again in all spots you want macro to click.
 3. Right click on the LeagueClicker in your system tray, then go to `Exit`, it will prompt to you a save location for a .txt file with all your recorded coordinates, save it anywhere you want. Opening this file you will have a copy of all your coordinates, use the X and Y position to [modify your config file](https://github.com/YuriXbr/LeagueClicker/blob/main/README.md#how-to-modify-your-configs).
-4. once you finished it, save the `config.json` and open the LeagueClicker again. <br />
+4. ~~Once you finished it, save the `config.json` and open the LeagueClicker again.~ 
+4. Once you finished up, open the settings page on the tray menu and put your coordinates, then hit the save button. <br />
 Now you will be able to use your `pause/resume` key to start the macro.
 
 ## **Issues:**
@@ -82,7 +84,10 @@ Now you will be able to use your `pause/resume` key to start the macro.
 > [!WARNING]
 > Esta é uma versão **BETA** e pode conter bugs. Use [GitHub Issues](https://github.com/YuriXbr/LeagueClicker/issues) para relatar um bug
 
-## Configurar:
+### WIKI:
+Uma nova versão mais simples foi publicada na [GitGubWiki](https://github.com/YuriXbr/LeagueClicker/wiki), de uma olhada
+
+## Instalação:
 1. Acesse a [página de lançamento do GitHub](https://github.com/YuriXbr/LeagueClicker/releases) e baixe a versão mais recente.
 2. Instale o *LeagueClicker* usando o arquivo `Setup.exe`
 
@@ -106,7 +111,8 @@ Leia estas seções para saber como usar o aplicativo.<br />
 > **Você pode sair clicando com o botão direito no ícone na bandeja do sistema e ir para `exit`**
 
 ### **Como modificar suas configurações:**
-1. Vá para `C:/LeagueClicker` e encontre config.json.
+1. ~~Vá para `C:/LeagueClicker` e encontre config.json.~~
+1. Aperte com o botão direito no icone na bandeija, e vá em "settings", lá você poderá modificar as cordenadas e teclas de atalho. No momento (Beta-1.3.2) Ainda não é possivel diminuir o delay pela página de configurações, sendo preciso ainda acessar o `config.json` em `c:/LeagueClicker`
 2. Atualize o que quiser, salve o arquivo e reinicie o aplicativo.
 
 * `__DevComments:` Comentários deixados pelo desenvolvedor para o usuário.
@@ -130,7 +136,8 @@ Leia estas seções para saber como usar o aplicativo.<br />
 1. Abra o App e coloque o mouse na posição desejada
 2. Pressione `Control+R` nas teclas padrão ou a tecla `RecordPosition` para obter as coordenadas do mouse. Faça isso novamente em todos os locais onde deseja que a macro clique.
 3. Clique com o botão direito no LeagueClicker na bandeja do sistema e vá em `Exit`, ele solicitará um local para salvar um arquivo .txt com todas as suas coordenadas gravadas, salve-o onde desejar. Abrindo este arquivo você terá uma cópia de todas as suas coordenadas, use a posição X e Y para [modificar seu arquivo de configuração](https://github.com/YuriXbr/LeagueClicker/blob/main/README.md#como-modificar-suas-configura%C3%A7%C3%B5es).
-4. assim que terminar, salve o `config.json` e abra o LeagueClicker novamente. <br />
+4. ~~Assim que terminar, salve o `config.json` e abra o LeagueClicker novamente.~~
+4. Assim que terminar, coloque suas coordenadas na página de configurações, e aperte em salvar <br />
 Agora você poderá usar a tecla `pause/resume` para iniciar a macro.
 
 ## **Problemas:**
