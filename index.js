@@ -1,20 +1,26 @@
 const { app, ipcMain } = require('electron');
 if (require('electron-squirrel-startup')) app.quit();
 
-const configManager = require('./src/utils/configManager.js');
-const keyManager = require('./src/utils/keyManager.js');
-const updater = require('./src/utils/updateManager.js');
 const logger = require('./src/utils/logManager.js');
-const trayManager = require('./src/utils/trayManager.js')
-const localeManager = require('./src/utils/localeManager.js')
+const configManager = require('./src/utils/configManager.js');
+
+
 /**
  * @param {String} first - opicional, informa se é a primeira execução do programa ou não
  */
 async function setup(first) {
     await configManager.setupConfig();
+
+    const updater = require('./src/utils/updateManager.js');
     if(first) await updater.checkUpdates();
+    
+    const localeManager = require('./src/utils/localeManager.js')
     await localeManager.setupLocales();
+
+    const keyManager = require('./src/utils/keyManager.js');
     keyManager.setupKeybinds();
+
+    const trayManager = require('./src/utils/trayManager.js')
     trayManager.createTrayIcon();
     if(first) logger.write('utils', 'main > setup', 'INICIALIZACAO CONCLUIDA');
 }

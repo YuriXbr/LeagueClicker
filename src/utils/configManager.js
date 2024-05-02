@@ -10,7 +10,7 @@ async function setupConfig(){
     
     // Verifica se o diretório de configuração existe, se não, cria
     if (!fs.existsSync(configFolderPath)) {
-        fs.mkdirSync(configFolderPath);
+        await fs.mkdirSync(configFolderPath);
         logger.write('utils', 'configManager > setupConfig', 'Diretorio de configuracoes nao encontrado, criando...')
     }
     logger.write('utils', 'configManager > setupConfig', 'Atualizando Configuracoes...');
