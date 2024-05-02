@@ -4,6 +4,9 @@
 > [!WARNING]
 > This is a **BETA** version and can have bugs, please use [GitHub Issues](https://github.com/YuriXbr/LeagueClicker/issues) to report a bug
 
+### WIKI:
+You cand find a better organized explanation on [GitGubWiki](https://github.com/YuriXbr/LeagueClicker/wiki), try it out!
+
 ## Setup:
 1. Go to [GitHub release page](https://github.com/YuriXbr/LeagueClicker/releases) and download the latest version.
 2. Install the *LeagueClicker* using the `Setup.exe` file
