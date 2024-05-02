@@ -1,73 +1,56 @@
-const { app, dialog } = require('electron');
+const { app, ipcMain } = require('electron');
 if (require('electron-squirrel-startup')) app.quit();
-const fs = require('fs');
 
-const localeManager = require('./src/utils/localeManager.js');
 const configManager = require('./src/utils/configManager.js');
 const keyManager = require('./src/utils/keyManager.js');
-const mouseManager = require('./src/utils/mouseManager.js');
 const updater = require('./src/utils/updateManager.js');
-const cache = require('./src/configs/cache.js')
-
-async function setup() {
-    configManager.setupConfig();
-    localeManager.setupLocales();
+const logger = require('./src/utils/logManager.js');
+const trayManager = require('./src/utils/trayManager.js')
+const localeManager = require('./src/utils/localeManager.js')
+/**
+ * @param {String} first - opicional, informa se é a primeira execução do programa ou não
+ */
+async function setup(first) {
+    await configManager.setupConfig();
+    if(first) await updater.checkUpdates();
+    await localeManager.setupLocales();
     keyManager.setupKeybinds();
-    require('./src/utils/trayManager.js').createTrayIcon();
-    await updater.checkUpdates();
+    trayManager.createTrayIcon();
+    if(first) logger.write('utils', 'main > setup', 'INICIALIZACAO CONCLUIDA');
 }
 
-function loop() {
-    setInterval(() => {
-        if (!cache.pauseReading()) {
-            mouseManager.getMousePosition(true)
-        }
+// function loop() {
+//     setInterval(() => {
+//         //if (!cache.pauseReading()) {
+//         //    mouseManager.getMousePosition(true)
+//         //}
 
 
 
-    }, config.config.loopdelay);
-}
+//     }, configManager.config.loopdelay);
+// }
 
 
-async function quit() {
-    if(cache._recordedPositions[0][0] == undefined) return app.quit();
-    const positionsText = await cache._recordedPositions.map((pos, index) => {
-        return `index: ${index} ; X: ${pos[0]} Y: ${pos[1]}`;   
-    }).join('\n');
-    await dialog.showSaveDialog({
-        title: 'Escolha o diretório para salvar as posições',
-        defaultPath: 'positions.txt',
-        buttonLabel: 'Salvar',
-        filters: [{ name: 'Text Files', extensions: ['txt'] }]
-    }).then(result => {
-        if (!result.canceled && result.filePath) {
-            fs.writeFileSync(result.filePath, positionsText, 'utf-8');
-            app.quit();
-        }
-    }).catch(err => {
-        console.error('Erro ao abrir o diálogo de salvamento:', err);
-    });
+ipcMain.on('request-config', (event) => {
+    
+    logger.write('config','IPC > request-config', "O front end requisitou as configuraç~eos");
+    event.reply('config-response', configManager.getConfig());
+  });
 
-    app.quit();
-}
-
-app.on('ready', () => {
+  ipcMain.on('update-settings', (event, { keybinds, clickPositions }) => {
+    logger.write('config','IPC > update-settings', JSON.stringify({ keybinds, clickPositions }));
+    configManager.updateToFile('keybinds', keybinds);
+    configManager.updateToFile('clickPositions', clickPositions);
     setup();
-    loop();
 });
 
-app.on('before-quit', (event) => {
-    console.log("\n\n\nRecorded Positions:\n");
-    cache._recordedPositions.forEach((pos, index) => {
-        if(pos[0] != undefined) console.log(`index: ${index} ; X: ${pos[0]} Y: ${pos[1]}`);
-    });
-    
+app.on('ready', () => {
+    setup('first');
+    //loop();
 });
 
 
 
 module.exports = {
-    setup,
-    loop,
-    quit,
+    setup
 }

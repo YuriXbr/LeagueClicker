@@ -46,6 +46,48 @@ li {
   padding-left: 5px;
 }
 
+.coordinate-label {
+  display: inline-block;
+  width: 150px;
+  color: white;
+}
+
+.coordinate-inputs {
+  display: inline-block;
+}
+
+.coordinate-input {
+  width: 100px;
+  height: 20px;
+  margin-right: 10px;
+  color: cyan;
+  border: hidden;
+  border-radius: 5px;
+  background-color: #22303C;
+  white-space: nowrap; /* Evitar quebras de linha */
+  overflow: hidden; /* Ocultar o conteúdo que ultrapassa o limite */
+  text-overflow: ellipsis; /* Exibir reticências (...) para indicar texto truncado */
+}
+
+.button-dropdown {
+  width: 150px;
+  height: 23px;
+  margin-right: 10px;
+  color: cyan;
+  border: hidden;
+  border-radius: 5px;
+  background-color: #22303C;
+  -webkit-appearance: none; /* Remover a aparência padrão do navegador */
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 20px 0 10px; /* Adicionar um preenchimento para o ícone da seta */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="white" d="M14.35 7.35a1 1 0 0 0-1.41 0L10 10.3 6.06 6.36a1 1 0 1 0-1.41 1.41l4.24 4.24a1 1 0 0 0 1.41 0l4.24-4.24a1 1 0 0 0 0-1.41z"/></svg>'); /* Adicionar um ícone de seta */
+  background-repeat: no-repeat;
+  background-position: right 5px center; /* Posicionar o ícone da seta */
+  background-size: 16px;
+}
+
+
 .buttons {
   text-align: center;
   margin-top: 20px;
@@ -86,4 +128,62 @@ li {
   border-color: rgba(27, 31, 35, .1);
   color: rgba(255, 255, 255, .8);
   cursor: default;
+}
+
+
+/* Estilos para o slider */
+.slider-container {
+  width: 80%; /* Defina a largura do slider */
+  margin: 20px auto; /* Centralize o slider na página */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 20px; /* Defina a altura do slider */
+  background-color: #333; /* Cor de fundo do slider */
+  border-radius: 10px; /* Borda arredondada do slider */
+}
+
+.slider-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Largura do indicador de posição */
+  height: 20px; /* Altura do indicador de posição */
+  background-color: #fff; /* Cor do indicador de posição */
+  border-radius: 50%; /* Faça o indicador de posição circular */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.slider-thumb:hover {
+  background-color: #ddd; /* Cor do indicador de posição ao passar o mouse */
+}
+
+/* Estilize os botões de avançar e retroceder, se houver */
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Largura dos botões */
+  height: 20px; /* Altura dos botões */
+  background-color: #fff; /* Cor dos botões */
+  border-radius: 50%; /* Faça os botões circulares */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.slider-prev {
+  left: 0; /* Posicione o botão de retroceder à esquerda */
+}
+
+.slider-next {
+  right: 0; /* Posicione o botão de avançar à direita */
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background-color: #ddd; /* Cor dos botões ao passar o mouse */
 }
